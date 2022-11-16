@@ -49,7 +49,6 @@ const Button = styled.div`
 `
 
 export interface IOrangeProps {
-
 }
 
 const Orange: React.FC<IOrangeProps> = () => {
