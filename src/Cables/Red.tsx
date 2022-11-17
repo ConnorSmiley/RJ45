@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-const OrangeContainer = styled.div`
+const Container = styled.div`
   ${tw`
 
     
     `}
 `;
 
-const OrangeStyle = styled.div`
+const Style = styled.div`
   ${tw`
     flex
     items-center
@@ -17,12 +17,12 @@ const OrangeStyle = styled.div`
     `}
 `;
 
-const OrangeBar = styled.div`
+const ColorBar = styled.div`
   ${tw`
-    bg-[#f97316]
+    bg-red-500
     h-14
     w-[30%]
-    mt-10
+    mt-1
     
     `}
 `;
@@ -32,7 +32,7 @@ const WhiteBar = styled.div`
     bg-gray-100
     h-14
     w-[30%]
-    mt-10
+    mt-1
     `}
 `;
 
@@ -41,7 +41,7 @@ const Button = styled.div`
   ${tw`
     h-14
     w-[40%]
-    mt-10
+    mt-1
     bg-gray-500
     rounded-xl
     items-center
@@ -53,12 +53,13 @@ const Button = styled.div`
     `}
 `;
 
+
 const Text = styled.div`
   margin-left: 15%;
   ${tw`
     h-14
     w-[40%]
-    mt-10
+    mt-1
     bg-gray-500
     rounded-xl
     items-center
@@ -72,10 +73,10 @@ const Text = styled.div`
 `
 
 
-export interface IOrangeProps {
+export interface IProps {
 }
 
-const Orange: React.FC<IOrangeProps> = () => {
+const Orange: React.FC<IProps> = () => {
   const [show, setShow] = useState(false);
   const toggleShow = () => {
     setShow(!show);
@@ -83,23 +84,23 @@ const Orange: React.FC<IOrangeProps> = () => {
 
   return (
     <>
-      <OrangeContainer>
-        <OrangeStyle>
+      <Container>
+        <Style>
 
-          {show ? <OrangeBar /> : <WhiteBar />}
+          {show ? <ColorBar /> : <WhiteBar />}
           {show ?
             <Text onClick={toggleShow}>
-             Orange
+             Red
             </Text> :
             <Button onClick={toggleShow}>
-              1
+              2
             </Button>
           }
 
-        </OrangeStyle>
-      </OrangeContainer>
+        </Style>
+      </Container>
     </>
-)
+  )
 }
 
 export default Orange

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import Header from "@/components/Header";
 import Orange from "@/Cables/Orange";
+import Red from "@/Cables/Red";
 
 const T568BContainer = styled.div`
   ${tw`
@@ -34,6 +35,7 @@ const T568B: React.FC<IT568BProps> = () => {
       <T568BContainer>
         <T568BStyle>
          <Orange />
+          <Red />
 
         </ T568BStyle>
       </T568BContainer>
