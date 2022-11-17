@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import Link from "next/link";
 
 const HeaderContainer = styled.div`
   ${tw`
@@ -26,29 +25,12 @@ const HeaderStyle = styled.div`
     `}
 `;
 
-const SwitchArrow = styled.div`
-  ${tw`
-    absolute
-    right-4
-    bg-gray-400
-    px-2
-    my-2
-    items-center
-    justify-center
-    inset-y-0
-    rounded-xl
-    cursor-pointer
-    hover:bg-pink-500
-    
-    `}
-`;
 
 export interface IHeaderProps {
   title: string | null;
 }
 
 const Header: React.FC<IHeaderProps> = ({ title }) => {
-  const [change, setChange] = useState(true);
 
   return (
     <>

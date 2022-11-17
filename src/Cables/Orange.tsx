@@ -72,10 +72,11 @@ const Text = styled.div`
 `
 
 
-export interface IOrangeProps {
+export interface IProps {
+  number: string | number;
 }
 
-const Orange: React.FC<IOrangeProps> = (props) => {
+const Orange: React.FC<IProps> = (props) => {
   const [show, setShow] = useState(false);
   const toggleShow = () => {
     setShow(!show);

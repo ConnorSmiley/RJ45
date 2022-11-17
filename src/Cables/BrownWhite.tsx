@@ -82,6 +82,7 @@ const Text = styled.div`
 
 
 export interface IProps {
+  number: string | number;
 }
 
 const Orange: React.FC<IProps> = (props) => {
