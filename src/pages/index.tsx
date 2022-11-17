@@ -10,6 +10,7 @@ const HomeContainer = styled.div`
   ${tw`
     w-screen
     h-screen
+    bg-black
     `}
 `;
 
@@ -24,44 +25,66 @@ const HomeStyles = styled.div`
 
 const HeaderContainer = styled.div`
   ${tw`
+  h-16
+  bg-gray-900
+  flex
+  items-center
+  justify-center
+  w-full
+  text-3xl
+  uppercase
+  font-bold
+  
     
     `}
 `;
 
 const Body = styled.div`
-    ${tw`
+  ${tw`
     w-full
     h-full
-    mt-14
     flex
     flex-col
     justify-center
     items-center
     text-7xl
     font-bold
+    text-white
+    space-y-20
+    `}
+`;
 
+const ButtonBody = styled.div`
+  ${tw`
+  bg-gray-500
+  p-8
+  rounded-3xl
+  cursor-pointer
+  hover:bg-pink-500  
     
     `}
-`
-
+`;
 
 const IndexPage: NextPage = () => {
 
   return (
     <>
+      <HeaderContainer>
+        Select One
+      </HeaderContainer>
       <HomeContainer>
         <HomeStyles>
-          <HeaderContainer>
-            <Header title={null}/>
-          </HeaderContainer>
           <Body>
-          <Link href="T568A">
-            T568A
-          </Link>
-
-          <Link href="T568B">
-            T568B
-          </Link>
+            <ButtonBody>
+              <Link href="T568A">
+                T568A
+              </Link>
+            </ButtonBody>
+            <ButtonBody>
+              <Link href="T568B">
+                T568B
+              </Link>
+            </ButtonBody>
           </Body>
 
         </HomeStyles>

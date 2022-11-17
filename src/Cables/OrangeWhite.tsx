@@ -19,13 +19,22 @@ const Style = styled.div`
 
 const ColorBar = styled.div`
   ${tw`
-    bg-red-500
+    bg-[#f97316]
     h-14
     w-[30%]
     mt-1
     
     `}
 `;
+
+const ColorBarWhite = styled.div`
+  ${tw`
+    bg-white
+    h-14
+    w-[50%]
+    `}
+`;
+
 
 const WhiteBar = styled.div`
   ${tw`
@@ -53,7 +62,6 @@ const Button = styled.div`
     `}
 `;
 
-
 const Text = styled.div`
   margin-left: 15%;
   ${tw`
@@ -66,7 +74,7 @@ const Text = styled.div`
     justify-center
     flex
     font-extrabold
-    text-2xl
+    text-xl
     uppercase
     
     `}
@@ -76,7 +84,7 @@ const Text = styled.div`
 export interface IProps {
 }
 
-const Orange: React.FC<IProps> = () => {
+const Orange: React.FC<IProps> = (props) => {
   const [show, setShow] = useState(false);
   const toggleShow = () => {
     setShow(!show);
@@ -87,13 +95,15 @@ const Orange: React.FC<IProps> = () => {
       <Container>
         <Style>
 
-          {show ? <ColorBar /> : <WhiteBar />}
+          {show ? <ColorBar>
+            <ColorBarWhite/>
+          </ColorBar> : <WhiteBar />}
           {show ?
             <Text onClick={toggleShow}>
-             Red
+             Orange/<br/>White
             </Text> :
             <Button onClick={toggleShow}>
-              2
+              {props.number}
             </Button>
           }
 
