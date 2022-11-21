@@ -25,9 +25,9 @@ const T568BStyle = styled.div`
     bg-black
     w-full
     h-full 
-    pt-14
-        pt-[20%]
-
+    flex
+    flex-col
+    justify-center
     `}
 
 `;

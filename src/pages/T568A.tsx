@@ -26,10 +26,13 @@ const T568AStyle = styled.div`
     bg-black
     w-full
     h-full 
-    pt-[20%]
+    flex
+    flex-col
+    justify-center
     
     `}
 `;
+
 
 const SwitchArrow = styled.div`
   ${tw`
